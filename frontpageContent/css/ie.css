@@ -1,0 +1,3 @@
+.dialog, .error > span, input ,p.skilmalar, body > footer{
+    behavior: url(content/javascript/PIE.htc);
+}
