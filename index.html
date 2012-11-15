@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="is">
+<head>
+    <meta charset="utf-8">
+    <title>Mappan.is</title>
+    <script src="content/javascript/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="content/javascript/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="content/javascript/underscore.js" type="text/javascript"></script>
+    <script src="content/javascript/backbone.js" type="text/javascript"></script>
+    <script src="content/javascript/jquery-input-hints.js" type="text/javascript"></script>
+    <script src="content/javascript/jquery.numeric.js" type="text/javascript"></script>
+    <script src="content/app/application.js" type="text/javascript"></script>
+    <script src="content/app/viewHelper.js" type="text/javascript"></script>
+    <script src="content/app/routes/Routes.js" type="text/javascript"></script>
+    <script src="content/app/models/Models.js" type="text/javascript"></script>
+    <script src="content/app/views/tabNavView.js" type="text/javascript"></script>
+    <script src="content/app/views/slideView.js" type="text/javascript"></script>
+    <script src="content/app/views/stofnaView.js" type="text/javascript"></script>
+    <script src="content/app/views/innskraningView.js" type="text/javascript"></script>
+    <script src="content/app/views/gleymtView.js" type="text/javascript"></script>
+    <script src="content/app/views/mappanView.js" type="text/javascript"></script>
+    <script src="content/app/views/mainView.js" type="text/javascript"></script>
+    <script src="content/app/views/skipulagView.js" type="text/javascript"></script>
+    <script src="content/app/views/oryggiView.js" type="text/javascript"></script>
+    <script src="content/app/views/thjonustaView.js" type="text/javascript"></script>
+    <script src="content/app/views/skyidView.js" type="text/javascript"></script>
+    <link href="content/css/style.css" rel="stylesheet"/>
+    <!--[if IE]>
+    <script src="content/javascript/PIE.js" type="text/javascript"></script>
+    <link href="content/css/ie.css" rel="stylesheet"/>
+    <![endif]-->
+    <link href="http://fast.fonts.com/cssapi/168ff11e-544a-4391-88d9-e8fc4a69dc0d.css" rel="stylesheet"
+          type="text/css"/>
+    <
+    <script>
+
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+
+    </script>
+</head>
+<body>
+<section id="app">
+    <header><img id="logo" onclick="window.location.hash = ''; void(0);" src="content/images/logo.png">
+        <section id="login"><input type="button" class="ui-gray-btn shadow-outset-btn"
+                                   onclick="window.location.hash = 'innskraning'" value="Innskráning"/>
+
+            <p>eða <a href="#stofna"><strong>stofnaðu aðgang</strong></a></p></section>
+    </header>
+    <div id="mainView">
+        <div id="mappanSlide" data-showNext="100" class="slide">
+            <h1 class="layer h1" style="top:101px;width:300px" data-x="509" data-speed="800" data-delay="400">Pósturinn
+                kynnir<br/>Möppuna</h1>
+
+            <p class="layer" style="width:500px;top:181px" data-x="509" data-speed="800" data-delay="600">Mappan er
+                ókeypis vefþjónusta sem tekur stóran hluta þess pósts<br/> sem fer venjulega inn um bréfalúguna og
+                birtir í tölvunni.</p>
+            <img class="layer" style=" top:-14px" data-x="125" data-speed="1100" data-delay="0"
+                 src="content/images/mappan-mynd.png">
+            <nav class="layer" style="width:500px;top:250px;" data-x="500" data-speed="900" data-delay="600"><input
+                    type="button" class="ui-gray-btn ui-small-btn  shadow-outset-btn"
+                    onclick="goToByScroll('#details > header')" value="Sjá meira"/><input
+                    type="button" class="ui-green-btn ui-small-btn  shadow-outset-btn"
+                    onclick="window.location.hash = 'stofna'" value="Stofna aðgang"/></nav>
+        </div>
+        <div id="skyidSlide" data-showNext="100" class="slide">
+            <img class="layer" style=" top:38px" data-x="-20" data-speed="1500" data-delay="0"
+                 src="content/images/skyid-mynd-1.png">
+            <img class="layer" style=" top:38px" data-x="-20" data-speed="1500" data-delay="0"
+                 src="content/images/skyid-mynd-2.png">
+
+            <h1 class="layer h1" style="top:70px;width:300px" data-x="509" data-speed="1100" data-delay="300">Póstur og
+                gögn<br/>
+                í skýinu</h1>
+
+            <p class="layer" style="width:500px;top:142px" data-x="509" data-speed="800" data-delay="600">Mappan geymir
+                póstinn þinn í skýinu. Hún leyfir þér einnig að hala<br/> upp þínum eigin gögnum til geymslu þar.</p>
+
+            <nav class="layer" style="width:500px;top:212px" data-x="499" data-speed="900" data-delay="800"><input
+                    type="button" class="ui-gray-btn ui-small-btn " onclick="goToByScroll('.box1')" value="Sjá meira"/>
+                <input type="button"
+                       class="ui-green-btn ui-small-btn"
+                       onclick="window.location.hash = 'stofna'"
+                       value="Stofna aðgang"/>
+            </nav>
+
+        </div>
+        <div id="skipulagSlide" data-showNext="100" class="slide">
+            <h1 class="layer h1" style="top:49px;width:300px" data-x="509" data-speed="1100" data-delay="300">Góð
+                leið<br/>að betra skipulagi</h1>
+
+            <p class="layer" style="width:500px;top:128px" data-x="509" data-speed="800" data-delay="600">Mappan hjálpar
+                við að halda skipulagi á póstflóði.</p>
+            <img class="layer" style=" top:14px" data-x="20" data-speed="1500" data-delay="0"
+                 src="content/images/skipulag-photo.png">
+            <nav class="layer" style="width:500px;top:175px" data-x="499" data-speed="900" data-delay="800"><input
+                    type="button" class="ui-gray-btn ui-small-btn " onclick="goToByScroll('.box4')" value="Sjá meira"/>
+                <input type="button"
+                       class="ui-green-btn ui-small-btn"
+                       onclick="window.location.hash = 'stofna'"
+                       value="Stofna aðgang"/>
+            </nav>
+
+        </div>
+        <div id="oryggiSlide" data-showNext="100" class="slide">
+            <h1 class="layer h1" style="top:98px;width:300px" data-x="506" data-speed="800" data-delay="300">Öryggi<br/>í
+                forgrunni</h1>
+
+            <p class="layer" style="width:500px;top:181px" data-x="506" data-speed="800" data-delay="400">Mappan setur
+                öryggið í forgrunn. Allur póstur og gögn eru geymd á<br/> öruggan hátt. Einnig er boðið upp á
+                innskráningu með rafrænum<br/> skilríkjum.</p>
+            <img class="layer" style="top:-14px; left: 60px" data-x="148" data-speed="900" data-delay="0"
+                 src="content/images/oryggi-mynd.png">
+            <nav class="layer" style="width:500px;top:250px" data-x="496" data-speed="900" data-delay="500"><input
+                    type="button" class="ui-gray-btn ui-small-btn" onclick="goToByScroll('.box2')" value="Sjá meira"/>
+                <input type="button"
+                       class="ui-green-btn ui-small-btn"
+                       onclick="window.location.hash = 'stofna'"
+                       value="Stofna aðgang"/>
+            </nav>
+        </div>
+        <div id="thjonustaSlide" data-showNext="100" class="slide">
+            <h1 class="layer h1" style="top:42px;width:300px" data-x="509" data-speed="1100" data-delay="300">Góð
+                þjónusta<br/>
+                er metnaðarmál</h1>
+
+            <p class="layer" style="width:500px;top:128px" data-x="509" data-speed="800" data-delay="600">Mappan leggur
+                áherslu á að þjónusta notendur vel. Einnig þróast<br/> hún í takt við tímann og er ætlunin að útbúa
+                lausnir fyrir farsíma<br/> og spjaldtölvur.</p>
+            <img class="layer" style=" top:38px" data-x="-20" data-speed="1500" data-delay="0"
+                 src="content/images/thjonusta-mynd.png">
+            <nav class="layer" style="width:500px;top:212px" data-x="499" data-speed="900" data-delay="800"><input
+                    type="button" class="ui-gray-btn ui-small-btn " onclick="goToByScroll('.box4')" value="Sjá meira"/>
+                <input type="button"
+                       class="ui-green-btn ui-small-btn"
+                       onclick="window.location.hash = 'stofna'"
+                       value="Stofna aðgang"/>
+            </nav>
+
+        </div>
+        <div id="innskraningSlide" data-showNext="0" class="slide">
+            <div class="layer dialog" style="top:32px;" data-x="286" data-speed="900" data-delay="0">
+                <header class="mb2"><h1 class="h1">Skráðu þig inn&nbsp;</h1>
+
+                    <p>eða <a href="#stofna">stofnaðu aðgang</a></p></header>
+                <div>
+                    <input id="kennitala_innskraning" class="mb1 kennitala" title="Kennitala" maxlength="10" type="text"/>
+                    <input id="lykilord_innskraning" class="mb2 lykilord" title="Lykilorð" type="password"/>
+                    <input type="button" id="innskraningBtn" class="ui-green-btn ui-wide-btn mb3" value="Tengjast"/>
+                    <br/>
+                    <a class="mb0" href="#gleymt">Gleymt lykilorð</a>
+                </div>
+                <aside><p class="step1"><strong class="h4">Ertu með rafræn skilríki?&nbsp;&nbsp;&nbsp;</strong></p>
+                    <input type="button" class="ui-small-btn ui-gray-btn step1" value="Rafræn skilríki"></aside>
+            </div>
+        </div>
+        <div id="stofnaSlide" data-showNext="0" class="slide">
+            <div class="layer dialog" style="top:32px;" data-x="286" data-speed="900" data-delay="0">
+                <header class="mb3"><h1 class="h1">Stofna aðgang&nbsp;</h1></header>
+                <div class="step1">
+                    <h2 class="h4 mb0">Við þurfum eingöngu kennitöluna þína</h2>
+
+                    <p class="mb2">Lykilorð verður búið til og sent í netbankann þinn</p>
+                    <input id="kennitala_stofna" type="text" class="mb2 kennitala" maxlength="10" title="Kennitala"/>
+                    <input type="button" id="stofnaBtn" class="ui-green-btn ui-wide-btn mb3" value="Stofna aðgang"/>
+                </div>
+                <div class="step2">
+                    <h2 class="h4 mb0">Nú þarftu að ná í lykilorðið í netbankann</h2>
+
+                    <p class="mb2">Farðu í netbankann þinn og skoðaðu lykilorðið undir „Rafræn skjöl“ („Netyfirlit“ hjá
+                        Íslandsbanka). Þar á eftir það getur þú skráð þig in <a href="#"><strong>á forsíðu</strong></a>
+                        eða með því að nota hnappinn fyrir neðan.</p>
+                </div>
+                <footer class="step2 mb2">
+                    <h2 class="mb0 h4">Búið að staðfesta?</h2>
+                    <input type="button" class="ui-green-btn ui-wide-btn" value="Innskráning"
+                           onclick="window.location.hash = 'innskraning'"/>
+                </footer>
+                <aside><p class="step1"><strong class="h4">Ertu með rafræn skilríki? Þú getur byrjað strax!&nbsp;&nbsp;&nbsp;</strong>
+                </p><input type="button" class="ui-small-btn ui-gray-btn step1" value="Rafræn skilríki"></aside>
+
+            </div>
+        </div>
+        <div id="gleymtSlide" data-showNext="0" class="slide">
+            <div class="layer dialog" style="top:32px;height:300px" data-x="286" data-speed="900" data-delay="0">
+                <header class="mb3"><h1 class="h1">Gleymt lykilorð&nbsp;</h1></header>
+                <div class="step1">
+                    <h2 class="h4 mb0">Hver er kennitalan þín?</h2>
+
+                    <p class="mb2">Nýtt lykilorð verður búið til og sent í netbankann þinn</p>
+                    <input id="kennitala_gleymt" type="text" class="mb2 kennitala" maxlength="10" title="Kennitala"/>
+                    <input type="button" id="gleymtBtn" class="ui-green-btn ui-wide-btn mb3" value="Fá nýtt lykilorð"/>
+                </div>
+                <div class="step2">
+                    <h2 class="h4 mb0">Nú þarftu að ná í lykilorðið í netbankann</h2>
+
+                    <p class="mb2">Farðu í netbankann þinn og skoðaðu lykilorðið undir „Rafræn skjöl“ („Netyfirlit“ hjá
+                        Íslandsbanka). Þar á eftir það getur þú skráð þig in <a href="#"><strong>á forsíðu</strong></a>
+                        eða með því að nota hnappinn fyrir neðan.</p>
+                </div>
+                <footer class="step2">
+                    <h2 class="mb0 h4">Búið að staðfesta?</h2>
+                    <input type="button" class="ui-green-btn ui-wide-btn" value="Innskráning"
+                           onclick="window.location.hash = 'innskraning'"/>
+                </footer>
+                <aside><p class="step1 h4">Viltu hætta við? <a href="#innskraning"><strong>Aftur í innskráningu</strong></a>
+                </p></aside>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <nav id="tabNavView">
+            <ul>
+                <li data-slide="mappan" class="nav1">Mappan</li>
+                <li data-slide="skyid" class="nav2">Skýið</li>
+                <li data-slide="oryggi" class="nav3">Öryggi</li>
+                <li data-slide="skipulag" class="nav4">Skipulag</li>
+                <li data-slide="thjonusta" class="nav5">Þjónusta</li>
+            </ul>
+        </nav>
+    </footer>
+</section>
+<section id="details">
+    <header><h1>Hvað<br/> er mappan</h1></header>
+    <article class="full">
+        <ul class="mappan">
+            <li><h1>Pappírspóstinn í tölvuna</h1>
+
+                <p>Inn um lúguna þína berst ýmis pappírspóstur sem hægt er að fá í Möppuna. Dæmi eru reikningar,
+                    reikningsyfirlit, launaseðlar, og önnur samskipti við fyrirtæki og stofnanir. Þú munt þó fá
+                    „skemmtilega“ póstinn áfram inn um bréfalúguna hjá þér.</p>
+            </li>
+            <li>
+                <h1>Gagnasvæði</h1>
+
+                <p>Mappan býður þér einnig upp á að geyma önnur gögn. Þetta geta verið hvaða gögn sem er, t.d.
+                    pdf-skjöl, word-skjöl, ljósmyndir, myndbönd, o.m.fl. Pláss fyrir gögn er samtals 1GB en hægt er að
+                    kaupa stærra svæði.</p>
+            </li>
+            <li>
+                <h1>Ókeypis</h1>
+
+                <p>Grunnþjónusta Möppunnar er ókeypis fyrir notendur. Í henni felst móttaka á öllum pósti og geymslu á
+                    gögnum upp að samtals 1GB að stærð. Við biðjum ekki um greiðslu-upplýsingar og tökum engar
+                    greiðslur nema óskað sé eftir viðbótarþjónustu.</p>
+            </li>
+        </ul>
+    </article>
+    <nav><a href="javascript:goToByScroll('#app')" class="">aftur upp</a></nav>
+    <article class="half left box1">
+        <header><h1>Pappírspósturinn<br/>
+            í skýinu!</h1></header>
+
+        <p>Mappan geymir póstinn þinn í skýinu og getur þú einnig halað upp þínum eigin gögnum til geymslu þar (allt að
+            1GB frítt en hægt að kaupa meira pláss). Þetta þýðir að gögnin þín eru geymd á öruggan máta á netinu, alltaf
+            aðgengileg, og þú þarft ekki að hafa áhyggjur af því að þau hverfi.</p></article>
+    <article class="half right box2">
+        <header><h1>Örugg geymsla<br/>
+            á gögnum</h1></header>
+
+        <p>Mappan veit að póstur getur innihaldið viðkvæmar upplýsingar og er því sérlega annt um öryggi. Öll gögn eru
+            geymd í XXX bita dulkóðun sem þýðir að enginn annar en notandinn getur skoðað póstinn – jafnvel í tilfelli
+            kerfisinnbrots. Einnig getur notandi valið að notast við rafræn skilríki til að koma í veg fyrir
+            öryggisvandamál sem geta fylgt notkun á ótryggu lykilorði.</p></article>
+    <nav><a href="javascript:goToByScroll('#app')" class="">aftur upp</a></nav>
+    <article class="half left box3">
+        <header><h1>Skipulag</h1></header>
+
+        <p>Mappan veit að einstaklingar fá mikinn póst sem getur gert það erfitt að finna upplýsingar í snatri. Mappan
+            býður því upp á möguleika á að skipuleggja póst og gögn, t.d. með því að flokka eftir tegundum póstsins.
+            Einnig er hægt að skipuleggja gögnin sem notandi hleður upp sjálfur.</p></article>
+    <article class="half right box4">
+        <header><h1>Þjónusta</h1></header>
+
+        <p>Möppunni er annt um að veita góða þjónustu. Í þessu felst ekki aðeins að halda vefkerfinu þægilegu, heldur
+            líka að svara fyrirspurnum í síma, netspjalli, eða tölvupósti. Einnig áttar Mappan sig á mikilvægi þess að
+            notendur geti nálgast gögnin sín þar sem þeir viljaj og er því framtíðarstefnan að skapa gott aðgengi úr
+            farsímum, spjaldtölvum, o.s.frv.</p></article>
+</section>
+<footer>
+    <h1>
+        Mappan er drifin af Póstinum
+    </h1>
+    <address>
+        Pósturinn<br/>
+        Stórhöfða 29<br/>
+        110 Reykjavík<br/>
+    </address>
+    <p>
+        Allur réttur áskilinn<br/>
+        © Pósturinn 2011
+    </p>
+</footer>
+<script type="text/javascript" charset="utf-8">
+
+    window.getOutsidePosition = function() {
+        alert("what")
+    };
+
+    $(function() {
+
+        window.appModel = new AppModel;
+        window.skipulagView = new SkipulagView;
+        window.oryggiView = new OryggiView;
+        window.mappanView = new MappanView;
+        window.thjonustaView = new ThjonustaView;
+        window.innskraningView = new InnskraningView;
+        window.gleymtView = new GleymtView;
+        window.stofnaView = new StofnaView;
+        window.skyidView = new SkyidView;
+        new MainView;
+        new Workspace;
+        Backbone.history.start();
+
+        $("#app").inputHintOverlay(0,0);
+    });
+
+
+    function goToByScroll(selector) {
+        $('html,body').animate({scrollTop: $(selector).offset().top}, 'slow');
+    }
+
+    function showError(element,message){
+     var pos = $(element).position();
+        $("<div><span><span></span><p>"+message+"</p></span></div>").addClass("error").css("top",pos.top).css("left",$(element).outerWidth()+20+pos.left).insertAfter(element);
+     
+    }
+
+    function isValidKennitala(kennitala){
+        var k = kennitala.replace("-","");
+
+        return (k.length == 10);
+    }
+
+    function clearErrors(){
+        $(".error").remove();
+    }
+
+    $(".kennitala").numeric();
+
+
+
+</script>
+</body>
+</html>

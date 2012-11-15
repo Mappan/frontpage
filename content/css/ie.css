@@ -1,0 +1,8 @@
+input[type=text]{
+
+    behavior: url(/content/javascript/PIE.htc);
+}
+
+input[type=button]{
+    behavior: url(/content/javascript/PIE.htc);
+}

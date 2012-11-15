@@ -1,0 +1,658 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* override end */
+
+body {
+    background: #282828;
+    font-family:'DIN Next W01 Regular';
+    font-size: 0.750em;
+}
+p{
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    font-family:'DIN Next W01 Light';
+    font-size: 1.0em;
+    color: #5f5f5f;
+}
+
+.dialog div p{
+    max-width: 330px;
+}
+
+
+a{
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    font-size: 1.0em;
+    text-decoration: underline;
+    color: #5f5f5f;
+    font-family:'DIN Next W01 Light';
+}
+
+
+strong{
+   font-family:'DIN Next W01 Regular';
+   color:#494949;
+}
+
+
+
+/* Input start */
+
+input[type=text],input[type=password]{
+    position: relative;
+    padding: 8px 20px 6px 40px;
+    background-color: #ededed;
+    border: solid 1px #cdcdcd;
+    border-radius: 5px;
+    box-shadow:  0 1px 1px #fff;
+    font-size: 1.333em;
+    color: #838282;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.dialog input[type=text],.dialog input[type=password]{
+    width: 226px;
+    background-color: #fff;
+}
+
+.inputHintOverlay{
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+ label.inputHintOverlay{
+    font-size: 1.333em;
+     position: absolute;
+     display: block;
+    color: #aeaeae;
+    top: 14px;
+     left: 54px;
+}
+
+.dialog input[type=text].kennitala{
+    background: #fff url(../images/kennitala-input-icon.png) no-repeat 10px center;
+}
+
+.dialog input[type=password].lykilord{
+    background: #fff url(../images/lykilord-input-icon.png) no-repeat 10px center;
+}
+
+
+input[type=button]{
+    position: relative;
+    padding: 8px 20px 6px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 7px 0 #cccccc;
+    font-family:'DIN Next W01 Regular';
+    border-radius: 5px;
+    font-size: 1.333em;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+
+}
+
+.ui-gray-btn{
+    background: #e4e4e4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#e1e1e1));
+    background: -webkit-linear-gradient(#e4e4e4, #e1e1e1);
+    background: -moz-linear-gradient(#e4e4e4, #e1e1e1);
+    background: -ms-linear-gradient(#e4e4e4, #e1e1e1);
+    background: -o-linear-gradient(#e4e4e4, #e1e1e1);
+    background: linear-gradient(#EDEDED, #F1F1F1);
+    border: solid 1px #cdcdcd;
+    color: #494949;
+}
+
+.ui-gray-btn:hover{
+
+    background: #F1F1F1;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e2e2e2), to(#dadada));
+    background: -webkit-linear-gradient(#e2e2e2, #dadada);
+    background: -moz-linear-gradient(#e2e2e2, #dadada);
+    background: -ms-linear-gradient(#e2e2e2, #dadada);
+    background: -o-linear-gradient(#e2e2e2, #dadada);
+    background: linear-gradient(#e2e2e2, #dadada);
+    box-shadow: 0 0 9px 1px #b2b2b2;
+}
+
+.ui-green-btn{
+    background: #8fc400;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#8fc400), to(#82b200));
+    background: -webkit-linear-gradient(#8fc400, #82b200);
+    background: -moz-linear-gradient(#8fc400, #82b200);
+    background: -ms-linear-gradient(#8fc400, #82b200);
+    background: -o-linear-gradient(#8fc400, #82b200);
+    background: linear-gradient(#8fc400, #82b200);
+    border: solid 1px #8bb131;
+    color: #fff;
+}
+
+.ui-green-btn:hover{
+    background: #82b200;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#82b200), to(#8fc400));
+    background: -webkit-linear-gradient(#82b200, #8fc400);
+    background: -moz-linear-gradient(#82b200, #8fc400);
+    background: -ms-linear-gradient(#82b200, #8fc400);
+    background: -o-linear-gradient(#82b200, #8fc400);
+    background: linear-gradient(#de0000, #8fc400);
+    border: solid 1px #8bb131;
+    box-shadow: 0 0 9px 1px #b2b2b2;
+    color: #fff;
+}
+
+
+input[type=button].ui-wide-btn{
+    width: 288px;
+    box-shadow: rgba(255, 255, 255, 1) 0 1px 1px;
+}
+
+
+input[type=button].ui-small-btn{
+    padding: 8px 16px 6px 16px;
+    font-size: 1.0em;
+}
+
+
+
+
+/* Input end */
+
+/* headings */
+
+.h1, .h2, .h3, .h4{
+    color: #626262;
+}
+
+.h1 {
+    display: inline-block;
+    font-size: 2.583em;
+}
+
+.h2{
+}
+
+.h3{
+}
+
+.h4{
+    font-size: 1.333em;
+}
+
+
+/* end headings */
+
+
+.error{
+    position: absolute;
+    top:-2px;
+    background: transparent url(../images/villu-bladra-or.png) no-repeat left 10px;
+    height: 41px;
+    padding: 0 10px 0 10px;
+}
+
+.error > span{
+   padding: 0 16px;
+   display: inline-block;
+   *background-color: #666;
+   background: rgba(0,0,0,0.5);
+   border-radius: 4px;
+   white-space:nowrap;
+    max-width: 300px;
+
+}
+
+.error  span span
+{
+    display: inline-block;
+    height:41px;
+    vertical-align: middle;
+    width: 1px;
+
+
+}
+
+.error p{
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    white-space: normal;
+
+
+}
+
+.error a{
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* margins height */
+.mb0{
+  margin-bottom: 3px;
+}
+.mb1{
+  margin-bottom: 10px;
+}
+
+.mb2{
+  margin-bottom: 20px;
+}
+
+.mb3{
+  margin-bottom: 34px;
+}
+
+/* margin */
+
+#details > header h1{
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    color: #fff;
+    text-align: left;
+    font-size: 2.583em;
+    line-height: 0.95em;
+    background: transparent url(../images/hvad-er-mappan.png) no-repeat;
+    padding: 10px 0 0 86px;
+    height: 84px;
+}
+
+
+header, section, article, p{
+    text-align: left;
+}
+
+#app {
+    background: transparent url(../images/background.png) repeat-x;
+    height: 662px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 20;
+    overflow: hidden;
+}
+
+body > section > header, body > section > footer, #mainView, #tabNavView,section#details {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;;
+}
+
+body > section#app > header {
+    background: transparent url(../images/header-background.png) repeat-x bottom;
+}
+
+body > section > footer > nav {
+    position: absolute;
+    z-index: 200;
+}
+
+#logo {
+    display: block;
+    width: 159px;
+    height: 49px;
+    padding: 14px 0;
+}
+
+
+#login{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
+#login p{
+    font-size: 1.167em;
+    color: #494949;
+}
+
+#login a{
+    text-decoration: none;
+    color: #494949;
+}
+
+#mainView {
+    position: relative;
+    height: 400px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide > .layer {
+    position: absolute;
+}
+
+
+
+.slide > p.layer {
+    /*font-size: 0.917em; */
+    font-size: 1.167em;
+    line-height: 1.3em;
+    color: #494949;
+}
+
+.dialog{
+    border-top: solid 1px #fff;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px;
+    background: #e3e3e3;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e3e3e3), to(#d1d1d1));
+    background: -webkit-linear-gradient(#e3e3e3, #d1d1d1);
+    background: -moz-linear-gradient(#e3e3e3, #d1d1d1);
+    background: -ms-linear-gradient(#e3e3e3, #d1d1d1);
+    background: -o-linear-gradient(#e3e3e3, #d1d1d1);
+    background: linear-gradient(#e3e3e3, #d1d1d1);
+    -pie-background: linear-gradient(#e3e3e3, #d1d1d1);
+    width: 426px;
+    min-height: 150px;
+}
+
+.dialog > aside{
+    position: absolute;
+    background: transparent url(../images/dialog-footer-background.png) no-repeat center 4px;
+    height: 75px;
+    padding: 25px 0 0;
+    bottom: -100px;
+    left: -50px;
+    width: 526px;
+}
+
+.dialog > header{
+    text-align: center;
+    padding: 26px 0 20px 0;
+    background: transparent url(../images/dialog-seperator.png) repeat-x left bottom;
+}
+
+.dialog > footer{
+    text-align: center;
+    padding: 16px 0 0px 0;
+    background: transparent url(../images/dialog-seperator.png) repeat-x left top;
+}
+
+
+.dialog .step1{
+
+}
+
+.dialog .step2{
+    display: none;
+}
+
+
+#tabNavView ul {
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    text-align: center;
+    width: 100%;
+    margin-top: -15px;
+
+}
+
+#tabNavView ul li {
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    margin: 0 5px;
+    width: 87px;
+    padding: 68px 5px 10px 5px;
+    text-align: center;
+    background: transparent url(../images/tabs.png) no-repeat top right;
+    font-size: 1.667em;
+    color: #b5b5b5;
+}
+
+    #tabNavView li:hover{
+        color: #666666;
+    }
+
+    #tabNavView li.nav1 {
+        background-position: 15px 6px;
+    }
+
+    #tabNavView li.nav1:hover{
+      background-position: 15px -144px;
+    }
+
+    #tabNavView li.nav2 {
+        background-position: -92px 6px;
+    }
+
+    #tabNavView li.nav2:hover {
+        background-position: -92px -144px;
+    }
+
+    #tabNavView li.nav3 {
+        background-position: -200px 6px;
+    }
+
+    #tabNavView li.nav3:hover {
+        background-position: -200px -144px;
+    }
+
+    #tabNavView li.nav4 {
+        background-position: -304px 6px;
+    }
+
+    #tabNavView li.nav4:hover {
+        background-position: -304px -144px;
+    }
+
+    #tabNavView li.nav5 {
+        background-position: -416px 6px;
+    }
+
+    #tabNavView li.nav5:hover {
+        background-position: -416px -144px;
+    }
+
+
+section#details{
+    text-align: center;
+    padding: 610px 0 40px 0;
+
+}
+
+section#details header{
+    text-align: center;
+}
+
+
+
+section#details > article{
+    background-color: #262626;
+    box-shadow: inset 0 0 7px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    vertical-align: top;
+}
+
+section#details > nav{
+    margin-bottom: 20px;
+    display: block;
+}
+
+section#details > nav a{
+    color: #1e1e1e;
+    font-size: 1.667em;
+    background: transparent url(../images/or-upp.png) no-repeat top right;
+    padding: 2px 20px 0 0;
+    text-decoration: none;
+}
+
+.full{
+    width: 980px;
+}
+
+.half{
+    width:478px;
+    *width:438px;
+    height: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left{
+    margin-right: 10px;
+}
+
+.right{
+    margin-left: 10px;
+}
+
+.full .mappan li{
+    float: left;
+    padding: 20px 0 16px 20px;
+    width: 300px;
+}
+
+.mappan li h1{
+    font-size: 1.667em;
+    color: #fff;
+    border-bottom: solid 2px #fff;
+    padding: 0 0 5px 0;
+    font-family:'DIN Next W01 Light';
+}
+
+.half header{
+    display: block;
+}
+.half h1{
+    font-size: 2.500em;
+    color: #fff;
+    font-family:'DIN Next W01 Regular';
+    padding: 8px 0 11px 80px;
+    height: 52px;
+    margin: auto auto;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    text-align: left;
+    
+}
+
+.full p,.half p{
+    font-size: 1.250em;
+    color: #fff;
+    font-family:'DIN Next W01 Light';
+    padding: 10px 0;
+    line-height: 1.4em;
+}
+
+.half p{
+    padding: 14px 20px;
+}
+
+.box1 header h1{
+    background: transparent url(../images/skyid-icon.png) no-repeat left top;
+}
+
+.box2 header h1{
+    background: transparent url(../images/oryggi-icon.png) no-repeat 18px 0;
+}
+
+.box3 h1{
+    background: transparent url(../images/skipulag-icon.png) no-repeat 16px 0;
+    padding: 10px 0 0 80px;
+}
+
+.box4 h1{
+    background: transparent url(../images/thjonusta-icon.png) no-repeat 16px 0;
+    padding: 10px 0 0 80px;
+}
+
+
+body > footer{
+    position: relative;
+    padding: 0 0 30px 0;
+    width: 980px;
+    text-align: right;
+    margin: 0 auto;
+    
+}
+
+footer h1, footer p, footer address{
+    padding: 10px 0;
+    text-align: right;
+    color:#fff;
+    font-family:'DIN Next W01 Light';
+}
+
+footer h1{
+   font-family:'DIN Next W01 Medium';
+}
