@@ -1,0 +1,13 @@
+.nytt-skonnun {
+    display: block;
+    width: 96px;
+    height: 114px;
+    background: url('../images/nytt-skonnun.png') center no-repeat;
+    position: absolute;
+    right: 0;
+    top: -3px;
+}
+
+#login {
+    margin-right: 110px;
+}
