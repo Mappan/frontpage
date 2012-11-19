@@ -1,0 +1,183 @@
+.floatin {
+	display: block;
+//	width: 200px;
+//	height: 200px;
+//	position: absolute;
+//	left: 50%;
+//	right:auto;
+//	margin-left: -1000px;
+	opacity: 0.0;
+//	margin-top: 0px;
+}
+
+
+.mappan-skref.floatin-text {
+//	margin-left: 1000px;
+	font-size: 20px;
+//	width: 415px;
+	text-align: left;
+//	top: -15px;
+	padding-bottom: 40px;
+	padding-left: 62px;
+	padding-top: 210px;
+	left: 400px;
+	opacity: 0.0;
+}
+
+.mappan-skref.floatin-text.transition-text {
+	left: 0px;
+	opacity: 1.0;
+}
+
+.floatin-6-text {
+	text-align: left;
+	font-size: 20px;
+	padding-left: 0px;
+	padding-top: 0px;
+}
+
+.floatin-text.transition-1 {
+	margin-left: 66px;
+}
+
+.floatin-1 {
+	right: 250px;
+	opacity: 0.0;
+}
+
+.floatin-1.transition-1 {
+	right: -50px;
+	opacity: 1.0;
+}
+
+.mappan-skref.floatin-2 {
+	padding-top: 65px;
+	right: 250px;
+}
+
+.floatin-2.transition-1 {
+	right: 40px;
+}
+
+.mappan-skref.floatin-3 {
+	padding-top: 90px;	
+	right: 250px;
+}
+
+.floatin-3.transition-1 {
+	right: -0px;
+}
+
+.floatin-3-text {
+	
+	top: -2px;
+}
+.floatin-4 {
+	right: 250px;
+}
+
+.floatin-4.transition-1 {
+	right: 0px;
+}
+
+.mappan-skref.floatin-5 {
+	padding-top: 115px;
+	right: 250px;
+
+}
+.floatin-5.transition-1 {
+	right: 0px;
+}
+
+.mappan-skref.floatin-6 {
+	padding-top: 100px;
+	margin-bottom: -200px;
+	right: 250px;
+}
+.floatin-6.transition-1 {
+	right: 0px;
+}
+
+.floatin-6-text {
+	
+	top: 4px;
+	margin-bottom: -50px;
+}
+
+
+.transition-text {
+	opacity: 1.0;
+	 -webkit-transition: left 1s ease-out, opacity 1s ease-out;
+		-moz-transition: left 1s ease-out, opacity 1s ease-out;
+		  -o-transition: left 1s ease-out, opacity 1s ease-out;
+		 -ms-transition: left 1s ease-out, opacity 1s ease-out;
+			 transition: left 1s ease-out, opacity 1s ease-out;
+}
+
+.transition-1 {
+	opacity: 1.0;
+	 -webkit-transition: right 1s ease-out, opacity 1s ease-out;
+		-moz-transition: right 1s ease-out, opacity 1s ease-out;
+		  -o-transition: right 1s ease-out, opacity 1s ease-out;
+		 -ms-transition: right 1s ease-out, opacity 1s ease-out;
+			 transition: right 1s ease-out, opacity 1s ease-out;
+}
+
+.tablet-transition {
+	 -webkit-transition: none !important;
+		-moz-transition: none !important;
+		  -o-transition: none !important;
+		 -ms-transition: none !important;
+			 transition: none !important;	
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+
+	.mappan-skref.floatin-text {
+		left: 0px;
+		opacity: 1.0;
+	}
+
+
+
+	.floatin-text {
+		margin-left: 66px;
+		opacity: 1.0;
+	}
+
+
+	.floatin-1 {
+		right: -50px;
+		opacity: 1.0;
+	}
+
+	.floatin-2 {
+		right: 40px !important;
+		opacity: 1.0;
+	}
+
+
+	.floatin-3 {
+		right: -0px !important;
+		opacity: 1.0;
+	}
+
+	.floatin-4 {
+		right: 0px !important;
+		opacity: 1.0;
+	}
+
+	.floatin-5 {
+		right: 0px !important;
+		opacity: 1.0;
+	}
+
+	.floatin-6 {
+		right: 0px !important;
+		opacity: 1.0;
+	}
+}

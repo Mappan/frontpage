@@ -1,0 +1,299 @@
+$font-light: 'DIN Next W01 Light', Arial, sans-serif;
+$font-regular: 'DIN Next W01 Regular', Arial, sans-serif;
+$font-bold: 'DIN Next W02 Medium', Arial, sans-serif;
+
+$images_url : '../images/';
+
+$floatin_offset : 1360px;
+$floatin_interval : 567px;
+
+@import "floatins";
+
+.debug_image {
+	display: none;
+	position: absolute;
+	width: 1200px;
+	height: 5978px;
+	background: url($images_url + 'debug_image.jpeg') center no-repeat;
+	left: 50%;
+	margin-left: -600px;
+	top: -28px;
+	opacity: 0.3;
+}
+
+
+.ui-gray-btn {
+	position: relative;
+	padding: 8px 20px 6px 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-family: $font-regular;
+	font-size: 16px;
+	border-radius: 5px;
+	
+	display: inline-block;
+	zoom: 1;
+	border: solid 1px #CDCDCD;
+	color: #494949;
+	-webkit-box-shadow: 0px 1px 0px 0px #ffffff inset, 0 0 10px -1px rgba(0,0,0,0.2);
+            box-shadow: 0px 1px 0px 0px #ffffff inset, 0 0 10px -1px rgba(0,0,0,0.2);
+	background-image: linear-gradient(bottom, rgb(237,237,237) 0%, rgb(240,240,240) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(237,237,237) 0%, rgb(240,240,240) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(237,237,237) 0%, rgb(240,240,240) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(237,237,237) 0%, rgb(240,240,240) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(237,237,237) 0%, rgb(240,240,240) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(237,237,237)),
+		color-stop(1, rgb(240,240,240))
+	);
+}
+
+
+
+header {
+	width: 980px;
+	height: 84px;
+	display: block;
+	
+	margin: 0 auto;
+	position: relative;
+	background: url($images_url + 'temp_header.jpg') center no-repeat;
+
+}
+
+#logo {
+	float: left;
+}
+
+#login {
+	float: right;
+	width: 400px;
+}
+
+#logo, #login {
+	padding: 16px 0;
+}
+
+body {
+	font-family: $font-regular;
+	text-align: center;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAD1BMVEWAgIBAQEC/v7////8AAADkkurDAAAABXRSTlMFBQUFBTaDu9IAAALTSURBVHhedZLbEcU2CAUBuQCQXAAPFwDCBdjX6b+m/GSSfCQFnJk9Owty5jgWt7PFQIfuVu5WhRPSRWxvlghRfBbNvcke+NVAysm5o9aUZpyVeI+CuFQqxxiRk0ksthjm73YQGzHZbA/+FBB9FhsfiBC0hEM1iOv3Ilu9rNh/BCwxYTpMz5peSHt/LaHa4EAPJJ3nM9bYjUnwRVznAyXvdy9c35IL0H5EE50+CUDYtP29V6qhd01xna9bwajBav7CqNSMBSzakMPhjw0nnjtP4KXb70wBN5YXqJt18sbch181VGfcykMBGmk8kzpiAmUDrzmNGWF/n3k8Yqnqs1eH375YAf59od9Bqzf2VRywLFHJ3VkAJNHfpBUtCHOT6mqfuX/PjH9kgX5tIvf+pMbrPRY11kBBcL6uME6P9Gll683U3qRQFT+2C51yJOuNGnuXQsC+X8n5mx0Il5FUr6FSMeHlMVFPwwUMCBQek9yEIEOkFqLSXM469kuYt+wNMd32bdivaMUSolH08XJYrrCDOmxHf7ufWCRuXvB3edVfw9d5L5n3uhIOPOLTL9z3D9eCzN1oYBNynJYKrjiUzL5Mr7UGFTASGDoBgPvRW2R9Vy2+wTSdFebcRvUM23owXWgNOnNWFS4uLJiqdhjNWQsgN1AU7LGQee9pmoKNC8Tb+J1AcAiUTvyxJAIwYFqE+jnW3Xl0j7ck3v0hZAw4UYFHL7Ael1ncjPbBPlW93U9pRy5iIhfz5cCBNoa3lK0CiQXraaZZsKYBzNs0+rdX7ByNTt0MjteegkixS5CD5hwuZw5wgp+Vm22nF+upX9q92AwOy/8WBAmtAGPrBlzwNQx0cNUbiGkUAlPcTHdLGiPQ5wrGq4Fvq5K1+EMPOX6cPiH3UJ0zK2Huup6Sv2jhutL4Ta0RVSnrDMmqnQiHKOh/9Qj/s9CCVUB6kToSuoEPxxlbDvkT38uJ7BrUU1AAAAAASUVORK5CYII=);
+	background-color: #e4e4e4;
+	color: #8d9aa2;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-bold;
+	font-weight: normal;
+	font-style: normal;
+	color: #222;
+	text-rendering: optimizeLegibility;
+	line-height: 1.1;
+	margin-bottom: 14px;
+	margin-top: 14px;
+}
+
+small {
+	font-size: 13px;
+}
+.reveal_section {
+	
+	display: block;
+	height: 5px;
+	margin-bottom: 555px;
+	position: relative;
+
+}
+
+
+h4 {
+	margin-top: 55px;
+	color: #8d9aa2;
+	font-size: 20px;
+}
+
+.front-mynd {
+	margin-top: 30px;
+}
+
+h1 {
+	margin-top: 58px;
+	font-size: 60px;
+	color: #454748;
+	margin-bottom: 60px;
+}
+
+p {
+	font-size: 20px;
+	
+}
+
+
+.hvernig {
+	width: 100%;
+	background: #8d9aa2;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 20px;
+	margin-top: 120px;
+	h3, p {
+		color: #e5e5e5;
+		
+	}
+	p {
+		padding: 0 20px;
+		font-family: $font-bold;
+		font-size: 20px;
+	}
+}
+
+
+//.timeline {
+//	display: block;
+//	position: relative;
+//	width: 75px;
+//	height: 2924px;
+//	left: 50%;
+//	margin-left: -37px;
+//	padding-top: 220px;
+//	margin-bottom: 200px;
+//	box-sizing:border-box;
+//	-moz-box-sizing:border-box; /* Firefox */
+//	-webkit-box-sizing:border-box; /* Safari */
+//}
+
+.table {
+	
+	background-color: rgba(199,206,212,0.14);
+	border: 1px solid #eeeeee;
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25) inset;
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25) inset;
+    border-radius: 8px;
+    margin-bottom: 120px;
+}
+
+.table p {
+	color: #494949;
+	font-size: 15px;
+	padding: 56px 110px 45px;
+
+}
+
+.hr {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #f0f1f1;
+	width: 100%;
+	height: 0;
+}
+
+
+
+.timeline {
+	background: url($images_url + 'timeline_part.png') center top repeat-y;
+	margin-bottom: 300px;
+
+
+}
+
+.timeline-overflow {
+	overflow-x: hidden;
+}
+
+.bullet-container {
+	position: relative;
+	left: 50%;
+	margin-left: -48px;
+}
+
+.with-bullet {
+	background: url($images_url + 'bullet-1.png') no-repeat;
+	display: block;
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	top: 180px;
+	left: 10px;
+	z-index: 3;
+
+}
+
+.bullet-1 {
+	background-image: url($images_url + 'bullet-1.png');
+}
+.bullet-2 {
+	background-image: url($images_url + 'bullet-2.png');
+}
+.bullet-3 {
+	background-image: url($images_url + 'bullet-3.png');
+}
+.bullet-4 {
+	background-image: url($images_url + 'bullet-4.png');
+}
+.bullet-5 {
+	background-image: url($images_url + 'bullet-5.png');
+}
+.bullet-6 {
+	background-image: url($images_url + 'bullet-6.png');
+}
+
+.mappan-skref {
+	padding-top: 50px;
+}
+
+a {
+	color: #494949;
+}
+
+.hr {
+	border-top: solid 1px #f2f2f2;
+	border-bottom: solid 1px #d9d9d9;
+}
+
+a:hover, a:visited, a:active {
+	color: #494949;
+}
+
+a.green-button {
+	background-color: #8fc400;
+	padding: 12px 0px;
+	text-decoration: none;
+	color: white;
+	font-size: 24px;
+	text-shadow: 0px 1px 4px rgba(0,0,0,0.9);
+	border: 1px solid #8bb131;
+	border-radius: 6px;
+ 	-webkit-box-shadow: 0px 1px 0px 0px #abd340 inset;
+     	    box-shadow: 0px 1px 0px 0px #abd340 inset;
+    margin: 38px auto;
+    min-width: 256px;
+    width: 256px;
+
+    display: block;
+}
+
+#login p {
+	font-size: 1.167em;
+	color: #494949;
+}
+
+
+/* Footer */
+footer h1, footer p, footer address {
+	padding: 10px 0;
+	text-align: right;
+	color: #494949;
+	font-family: $font-light;
+	font-size: 12px;
+	margin: 0;
+}
+
+
+footer h1 {
+	font-family: $font-bold;
+	font-size: 12px;
+}

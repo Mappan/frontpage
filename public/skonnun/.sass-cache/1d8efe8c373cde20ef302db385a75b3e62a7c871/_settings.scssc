@@ -1,0 +1,589 @@
+3.2.1 (Media Mark)
+e1e7a5dc1941853307c6a648f03adc753a217656
+o:Sass::Tree::RootNode
+:
+@linei:@template"—"// Settings file containing Foundation defaults
+
+// Grid Settings
+
+$rowWidth: 1000px !default;
+$columnGutter: 30px !default;
+$totalColumns: 12 !default;
+$mobileTotalColumns: 4 !default;
+$blockGridElements: 12 !default; // Highest number of block grid elements, Maximum of 24 supported
+
+// Colors Settings
+
+$mainColor: #2ba6cb !default;
+$secondaryColor: #e9e9e9 !default;
+$alertColor: #c60f13 !default;
+$successColor: #5da423 !default;
+$txtColor: #222 !default;
+$highlightColor: #ffff99 !default;
+$black: #000 !default;
+$white: #fff !default;
+$shinyEdge: rgba(#fff, .5) !default;
+$darkEdge: rgba(#000, .2) !default;
+
+// Font Settings
+
+$headerFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$headerFontWeight: bold !default;
+$headerFontStyle: normal !default;
+$headerFontColor: #222 !default;
+$bodyFontFamily: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$bodyFontWeight: normal !default;
+$bodyFontStyle: normal !default;
+$bodyFontColor: $txtColor !default;
+
+// Text Direction Settings
+
+$textDirection: ltr !default; // Controls default global text direction, 'rtl' or 'ltr'
+$defaultFloat: left !default; // Change this to 'right' for right-to-left languages
+$defaultOpposite: right !default; // Change this to 'left' for right-to-left languages
+
+@if $textDirection == ltr {
+  $defaultFloat: left;
+  $defaultOpposite: right;
+} @else {
+  $defaultFloat: right;
+  $defaultOpposite: left;
+}
+
+// Button Settings
+
+$buttonRadius: 3px !default;
+$btnBase: 10px !default;
+
+$tinyBtnBase: $btnBase - 5 !default;
+$smallBtnBase: $btnBase - 3 !default;
+$largeBtnBase: $btnBase + 5 !default;
+
+// Form Settings
+
+$formSpacing: 12px !default;
+$labelFontWeight: 500 !default;
+$labelFontColor: lighten(#000, 30%) !default;
+$labelBtmMargin: 3px !default;
+$inputFontColor: rgba(0,0,0,0.75) !default;
+$inputFontSize: 14px !default;
+$inputBgColor: #fff !default;
+$inputFocusBgColor: darken(#fff, 2%) !default;
+$inputBorderColor: darken(#fff, 20%) !default;
+$inputFocusBorderColor: darken(#fff, 30%) !default;
+$inputBorderStyle: solid !default;
+$inputBorderWidth: 1px !default;
+$inputBorderRadius: 2px !default;
+$fieldsetBorderRadius: 3px !default;
+
+// Custom Form Settings
+
+$custFormBorderColor: #ccc !default;
+$custFormBgColor: #fff !default;
+$custCheckColor: #222 !default;
+$custSelectCurrentFontColor: #141414 !default;
+$custSelectBgColor: #fff !default;
+$custSelectBorderColor: #ddd !default;
+$custSelectTriangleColor: #aaa !default;
+$custSelectTriangleColorOpen: #222 !default;
+$custSelectDropHeight: 200px !default;
+$custDropdownBgColor: #fff !default;
+$custDropdownBorderColor: darken(#fff, 20%) !default;
+$custDropdownFontColor: #555 !default;
+$custDropdownSelectedBgColor: lighten(#2ba6cb, 40%) !default;
+$custDropdownSelectedFontColor: #000 !default;
+$custFormDisabledBgColor: #ddd !default;
+
+// Tab Settings
+
+$tabHeight: 40px !default;
+$tabTermFontSize: 12px;
+
+// Nav Bar Settings
+
+$navBarHeight: 40px !default;
+$navFlyoutBaseWidth: 250px !default;
+
+// Top Bar Settings
+
+$topBarBgColor: #222 !default;
+$topBarHeight: 45px !default;
+$topBarHeightMobile: 45px !default;
+$topBarBtmMargin: 30px !default;
+$topBarTitleWeight: bold !default;
+$topBarTitleSize: 17px !default;
+$topBarLinkColor: #fff !default;
+$topBarLinkWeight: bold !default;
+$topBarLinkSize: 13px !default;
+$topBarDropBgColor: #222 !default;
+$topBarDropLinkColor: #fff !default;
+$topBarDropToggleSize: 5px !default;
+$topBarDropToggleColor: #fff !default;
+$topBarDropToggleAlpha: 0.5 !default;
+$topBarSearchWidth: 200px !default;
+$topBarBreakPoint: 940px !default; // Change to 9999px for always mobile layout
+$topBarNavToggleSize: 8px !default;
+
+// UI Settings
+
+$thumbRadius: 3px !default;
+$progBarHeight: 25px !default;
+$progBarBorderColor: darken(#fff, 20%) !default;
+$progBarBorderSize: 1px !default;
+$progBarPad: 2px !default;
+$linkListBottomMargin: 17px -22px !default;
+$tableBorderRadius: 3px !default;
+
+// Tooltip Settings
+
+$hasTipBorderBottom: dotted 1px #ccc !default;
+$hasTipFontWeight: bold !default;
+$hasTipFontColor: #333 !default;
+$hasTipBorderBottomHover: dotted 1px darken($mainColor, 20%) !default;
+$hasTipFontColorHover: $mainColor !default;
+$tooltipBackgroundColor: #000 !default;
+$tooltipBackgroundOpacity: 0.85 !default;
+$tooltipFontSize: 12px !default;
+$tooltipFontWeight: bold !default;
+$tooltipFontColor: #fff !default;
+$tapToCloseFontSize: 10 !default;
+$tapToCloseFontWeight: normal !default;
+$tapToCloseFontColor: #888 !default;
+$tooltipFontSizeScreenSm: 14 !default;
+$tooltipBgOpacityScreenSm: 0.85 !default;
+$tooltipBorderRadius: 4px !default;
+
+// Pricing Table Settings
+
+$priceTableBorder: solid 1px #ddd !default;
+$priceTitleBgColor: #ddd !default;
+$priceTitlePadding: 15px 20px !default;
+$priceTitleAlign: center !default;
+$priceTitleColor: #333 !default;
+$priceTitleWeight: bold !default;
+$priceTitleSize: 16px !default;
+
+$priceMoneyBgColor: #eee !default;
+$priceMoneyPadding: 15px 20px !default;
+$priceMoneyAlign: center !default;
+$priceMoneyColor: #333 !default;
+$priceMoneyWeight: normal !default;
+$priceMoneySize: 20px !default;
+
+$priceBgColor: #fff !default;
+$priceDescColor: #777 !default;
+$priceDescPadding: 15px !default;
+$priceDescAlign: center !default;
+$priceDescFontSize: 12px !default;
+$priceDescWeight: normal !default;
+$priceDescLineHeight: 1.4 !default;
+$priceDescBtmBorder: dotted 1px #ddd !default;
+
+$priceItemColor: #333 !default;
+$priceItemPadding: 15px !default;
+$priceItemAlign: center !default;
+$priceItemFontSize: 14px !default;
+$priceItemWeight: normal !default;
+$priceItemBtmBorder: dotted 1px #ddd !default;
+
+$priceCtaBgColor: #f5f5f5 !default;
+$priceCtaAlign: center !default;
+$priceCtaPadding: 20px !default;
+
+// Orbit Settings
+
+$orbitCaptionBgColorOldBrowser: #000 !default;
+$orbitCaptionBgColor: rgba(0,0,0,.6) !default;
+$orbitCaptionFontColor: #fff !default;
+$orbitBulletNavColor: #999 !default;
+$orbitBulletNavColorActive: #222 !default;
+$orbitHasThumbBorderColor: #000 !default;
+$orbitHasThumbBorderWidth: 2px !default;
+$orbitHasThumbBorderStyle: solid !default;
+$orbitSlideNumBgColor: rgba(0,0,0,0.7) !default;
+$orbitSlideNumFontColor: #fff !default;
+$orbitSlideNumPadding: 5px !default;
+
+// Clearing Settings
+
+$clearingBg: rgba(0,0,0,0.8) !default;
+$clearingOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionBg: rgba(0,0,0,0.7) !default;
+$clearingCaptionOldBrowserBg: rgb(0,0,0) !default;
+$clearingCaptionFontColor: #fff !default;
+$clearingCloseColor: #fff !default;
+$clearingArrowColor: #fff !default;
+$clearingArrowSize: 16px !default;
+$clearingCarouselBg: rgba(0,0,0,0.75) !default;
+$clearingCarouselOldBrowserBg: rgb(0,0,0) !default;
+$clearingCarouselHeight: 150px !default;
+$clearingActiveImgHeight: 75% !default;
+$clearingCarouselThumbWidth: 175px;
+$clearingCarouselThumbActiveBorder: 4px solid rgb(255,255,255) !default;
+$clearingImgBg: rgba(0,0,0,0.75) !default;
+$clearingImgOldBrowserBg: rgb(0,0,0) !default;
+
+// Joyride Settings
+
+$tipBg: rgba(0,0,0,0.8) !default;
+$tipBgIE8: #000 !default;
+$tipFontColor: #fff !default;
+$tipHeaderWeight: bold !default;
+$tipDefaultWidth: 300px !default;
+$tipBorderRadius: 4px !default;
+$tipPadding: 18px 20px 24px !default;
+$tipNubSize: 14px !default;
+$tipFontSize: 14px !default;
+$tipTimerWidth: 50px !default;
+$tipTimerHeight: 3px !default;
+$tipTimerBorder: solid 1px #555 !default;
+$tipTimerColor: #666 !default;
+$tipCloseColor: #777 !default;
+$tipCloseSize: 20px !default;
+$tipCloseWeight: normal !default;
+$tipScreenFill: rgba(0,0,0,0.5) !default;
+
+// Off Canvas Width Settings
+
+$mainWidth: 80% !default;
+$complementaryWidth: 20% !default;
+
+// Modular Scale Settings
+
+// $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
+$baseFontSize: 14px !default;
+$importantModNum: 44px !default;
+$base-size: $baseFontSize $importantModNum;
+// Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
+// http://www.modularscale.com by Tim Brown
+// https://github.com/scottkellum/modular-scale by scottkellum
+
+// Media Queries
+
+$screenSmall: 768px !default;
+$screenMedium: 1279px !default;
+$screenXlarge: 1441px !default;
+
+// Saving for better em-based testing
+// $screenSmall: 44em !default;
+// $screenMedium: 77em !default;
+// $screenXlarge: 104em !default;
+
+// Saving for Sass 3.2 stable release
+// $mediaSmall: "only screen and (max-width: 767px)" !default;
+// $mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
+// $mediaXlarge: "only screen and (min-width: 1441px)" !default;
+// $mediaLandscape: "screen and (orientation: landscape)" !default;
+// $mediaPortrait: "screen and (orientation: portrait)" !default;
+// $mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default;
+
+:@has_childrenT:@options{ :@children[Øo:Sass::Tree::CommentNode
+;i;	@:
+@type:silent;
+[ :@value["7/* Settings file containing Foundation defaults */o;
+;i;	@;;;
+[ ;["/* Grid Settings */o:Sass::Tree::VariableNode;i
+:@guarded"!default;	@:
+@expro:Sass::Script::Number;i
+:@numerator_units["px:@original"1000px;	@;iè:@denominator_units[ :
+@name"rowWidth;
+[ o;;i;"!default;	@;o;;i;["px;"	30px;	@;i#;[ ;"columnGutter;
+[ o;;i;"!default;	@;o;;i;[ ;"12;	@;i;[ ;"totalColumns;
+[ o;;i;"!default;	@;o;;i;[ ;"4;	@;i	;@(;"mobileTotalColumns;
+[ o;;i;"!default;	@;o;;i;[ ;"12;	@;i;@(;"blockGridElements;
+[ o;
+;i;	@;;;
+[ ;["I/* Highest number of block grid elements, Maximum of 24 supported */o;
+;i;	@;;;
+[ ;["/* Colors Settings */o;;i;"!default;	@;o:Sass::Script::Color	;i:@attrs{	:	blueiË:redi0:
+alphai:
+greeni¦;	@;0;"mainColor;
+[ o;;i;"!default;	@;o;	;i;{	;ié;ié;i;ié;	@;0;"secondaryColor;
+[ o;;i;"!default;	@;o;	;i;{	;i;iÆ;i;i;	@;0;"alertColor;
+[ o;;i;"!default;	@;o;	;i;{	;i(;ib;i;i¤;	@;0;"successColor;
+[ o;;i;"!default;	@;o;	;i;{	;i';i';i;i';	@;0;"txtColor;
+[ o;;i;"!default;	@;o;	;i;{	;i™;iÿ;i;iÿ;	@;0;"highlightColor;
+[ o;;i;"!default;	@;o;	;i;{	;i ;i ;i;i ;	@;0;"
+black;
+[ o;;i;"!default;	@;o;	;i;{	;iÿ;iÿ;i;iÿ;	@;0;"
+white;
+[ o;;i;"!default;	@;o:Sass::Script::Funcall:@splat0;i:@keywords{ :
+@args[o;	;i;{	;iÿ;iÿ;i;iÿ;	@;0o;;i;[ ;"0.5;	@;f0.5;@(;	@;"	rgba;"shinyEdge;
+[ o;;i;"!default;	@;o;;0;i;{ ; [o;	;i;{	;i ;i ;i;i ;	@;0o;;i;[ ;"0.2;	@;f0.20000000000000001 ™š;@(;	@;"	rgba;"darkEdge;
+[ o;
+;i;	@;;;
+[ ;["/* Font Settings */o;;i;"!default;	@;o:Sass::Script::List	;i;	@:@separator:
+comma;[
+o:Sass::Script::String	;i;	@;:string;"Helvetica Neueo;$	;i;	@;;%;"Helveticao;$	;i;	@;:identifier;"Helveticao;$	;i;	@;;&;"
+Arialo;$	;i;	@;;&;"sans-serif;"headerFontFamily;
+[ o;;i ;"!default;	@;o;$	;i ;	@;;&;"	bold;"headerFontWeight;
+[ o;;i!;"!default;	@;o;$	;i!;	@;;&;"normal;"headerFontStyle;
+[ o;;i";"!default;	@;o;	;i";{	;i';i';i;i';	@;0;"headerFontColor;
+[ o;;i#;"!default;	@;o;!	;i#;	@;";#;[
+o;$	;i#;	@;;%;"Helvetica Neueo;$	;i#;	@;;%;"Helveticao;$	;i#;	@;;&;"Helveticao;$	;i#;	@;;&;"
+Arialo;$	;i#;	@;;&;"sans-serif;"bodyFontFamily;
+[ o;;i$;"!default;	@;o;$	;i$;	@;;&;"normal;"bodyFontWeight;
+[ o;;i%;"!default;	@;o;$	;i%;	@;;&;"normal;"bodyFontStyle;
+[ o;;i&;"!default;	@;o:Sass::Script::Variable	;i&:@underscored_name"txtColor;	@;"txtColor;"bodyFontColor;
+[ o;
+;i(;	@;;;
+[ ;[""/* Text Direction Settings */o;;i*;"!default;	@;o;$	;i*;	@;;&;"ltr;"textDirection;
+[ o;
+;i*;	@;;;
+[ ;["A/* Controls default global text direction, 'rtl' or 'ltr' */o;;i+;"!default;	@;o;$	;i+;	@;;&;"	left;"defaultFloat;
+[ o;
+;i+;	@;;;
+[ ;["=/* Change this to 'right' for right-to-left languages */o;;i,;"!default;	@;o;$	;i,;	@;;&;"
+right;"defaultOpposite;
+[ o;
+;i,;	@;;;
+[ ;["</* Change this to 'left' for right-to-left languages */u:Sass::Tree::IfNode§[o:Sass::Script::Operation
+:@operator:eq:
+@linei.:@operand2o:Sass::Script::String	;i.:@options{ :
+@type:identifier:@value"ltr;@:@operand1o:Sass::Script::Variable	;i.:@underscored_name"textDirection;@:
+@name"textDirectionu:Sass::Tree::IfNodeï[00[o:Sass::Tree::VariableNode:
+@linei2:@guarded0:@options{ :
+@expro:Sass::Script::String	;i2;@:
+@type:identifier:@value"
+right:
+@name"defaultFloat:@children[ o; ;i3;0;@;	o;
+	;i3;@;;;"	left;"defaultOpposite;[ [o:Sass::Tree::VariableNode;i/:@guarded0;@:
+@expro;
+	;i/;@;;;"	left;"defaultFloat:@children[ o;;i0;0;@;o;
+	;i0;@;;;"
+right;"defaultOpposite;[ o;
+;i6;	@;;;
+[ ;["/* Button Settings */o;;i8;"!default;	@;o;;i8;["px;"3px;	@;i;[ ;"buttonRadius;
+[ o;;i9;"!default;	@;o;;i9;["px;"	10px;	@;i;[ ;"btnBase;
+[ o;;i;;"!default;	@;o:Sass::Script::Operation
+:@operator:
+minus;i;:@operand2o;;i;;[ ;"5;	@;i
+;@(;	@:@operand1o;'	;i;;("btnBase;	@;"btnBase;"tinyBtnBase;
+[ o;;i<;"!default;	@;o;*
+;+;,;i<;-o;;i<;[ ;"3;	@;i;@(;	@;.o;'	;i<;("btnBase;	@;"btnBase;"smallBtnBase;
+[ o;;i=;"!default;	@;o;*
+;+:	plus;i=;-o;;i=;[ ;"5;	@;i
+;@(;	@;.o;'	;i=;("btnBase;	@;"btnBase;"largeBtnBase;
+[ o;
+;i?;	@;;;
+[ ;["/* Form Settings */o;;iA;"!default;	@;o;;iA;["px;"	12px;	@;i;[ ;"formSpacing;
+[ o;;iB;"!default;	@;o;;iB;[ ;"500;	@;iô;@(;"labelFontWeight;
+[ o;;iC;"!default;	@;o;;0;iC;{ ; [o;	;iC;{	;i ;i ;i;i ;	@;0o;;iC;["%;"30%;	@;i#;[ ;	@;"lighten;"labelFontColor;
+[ o;;iD;"!default;	@;o;;iD;["px;"3px;	@;i;[ ;"labelBtmMargin;
+[ o;;iE;"!default;	@;o;;0;iE;{ ; [	o;;iE;[ ;"0;	@;i ;@(o;;iE;[ ;"0;	@;i ;@(o;;iE;[ ;"0;	@;i ;@(o;;iE;[ ;"	0.75;	@;f	0.75;@(;	@;"	rgba;"inputFontColor;
+[ o;;iF;"!default;	@;o;;iF;["px;"	14px;	@;i;[ ;"inputFontSize;
+[ o;;iG;"!default;	@;o;	;iG;{	;iÿ;iÿ;i;iÿ;	@;0;"inputBgColor;
+[ o;;iH;"!default;	@;o;;0;iH;{ ; [o;	;iH;{	;iÿ;iÿ;i;iÿ;	@;0o;;iH;["%;"2%;	@;i;[ ;	@;"darken;"inputFocusBgColor;
+[ o;;iI;"!default;	@;o;;0;iI;{ ; [o;	;iI;{	;iÿ;iÿ;i;iÿ;	@;0o;;iI;["%;"20%;	@;i;[ ;	@;"darken;"inputBorderColor;
+[ o;;iJ;"!default;	@;o;;0;iJ;{ ; [o;	;iJ;{	;iÿ;iÿ;i;iÿ;	@;0o;;iJ;["%;"30%;	@;i#;[ ;	@;"darken;"inputFocusBorderColor;
+[ o;;iK;"!default;	@;o;$	;iK;	@;;&;"
+solid;"inputBorderStyle;
+[ o;;iL;"!default;	@;o;;iL;["px;"1px;	@;i;[ ;"inputBorderWidth;
+[ o;;iM;"!default;	@;o;;iM;["px;"2px;	@;i;[ ;"inputBorderRadius;
+[ o;;iN;"!default;	@;o;;iN;["px;"3px;	@;i;[ ;"fieldsetBorderRadius;
+[ o;
+;iP;	@;;;
+[ ;["/* Custom Form Settings */o;;iR;"!default;	@;o;	;iR;{	;iÌ;iÌ;i;iÌ;	@;0;"custFormBorderColor;
+[ o;;iS;"!default;	@;o;	;iS;{	;iÿ;iÿ;i;iÿ;	@;0;"custFormBgColor;
+[ o;;iT;"!default;	@;o;	;iT;{	;i';i';i;i';	@;0;"custCheckColor;
+[ o;;iU;"!default;	@;o;	;iU;{	;i;i;i;i;	@;0;"custSelectCurrentFontColor;
+[ o;;iV;"!default;	@;o;	;iV;{	;iÿ;iÿ;i;iÿ;	@;0;"custSelectBgColor;
+[ o;;iW;"!default;	@;o;	;iW;{	;iÝ;iÝ;i;iÝ;	@;0;"custSelectBorderColor;
+[ o;;iX;"!default;	@;o;	;iX;{	;iª;iª;i;iª;	@;0;"custSelectTriangleColor;
+[ o;;iY;"!default;	@;o;	;iY;{	;i';i';i;i';	@;0;" custSelectTriangleColorOpen;
+[ o;;iZ;"!default;	@;o;;iZ;["px;"
+200px;	@;iÈ;[ ;"custSelectDropHeight;
+[ o;;i[;"!default;	@;o;	;i[;{	;iÿ;iÿ;i;iÿ;	@;0;"custDropdownBgColor;
+[ o;;i\;"!default;	@;o;;0;i\;{ ; [o;	;i\;{	;iÿ;iÿ;i;iÿ;	@;0o;;i\;["%;"20%;	@;i;[ ;	@;"darken;"custDropdownBorderColor;
+[ o;;i];"!default;	@;o;	;i];{	;iZ;iZ;i;iZ;	@;0;"custDropdownFontColor;
+[ o;;i^;"!default;	@;o;;0;i^;{ ; [o;	;i^;{	;iË;i0;i;i¦;	@;0o;;i^;["%;"40%;	@;i-;[ ;	@;"lighten;" custDropdownSelectedBgColor;
+[ o;;i_;"!default;	@;o;	;i_;{	;i ;i ;i;i ;	@;0;""custDropdownSelectedFontColor;
+[ o;;i`;"!default;	@;o;	;i`;{	;iÝ;iÝ;i;iÝ;	@;0;"custFormDisabledBgColor;
+[ o;
+;ib;	@;;;
+[ ;["/* Tab Settings */o;;id;"!default;	@;o;;id;["px;"	40px;	@;i-;[ ;"tabHeight;
+[ o;;ie;0;	@;o;;ie;["px;"	12px;	@;i;[ ;"tabTermFontSize;
+[ o;
+;ig;	@;;;
+[ ;["/* Nav Bar Settings */o;;ii;"!default;	@;o;;ii;["px;"	40px;	@;i-;[ ;"navBarHeight;
+[ o;;ij;"!default;	@;o;;ij;["px;"
+250px;	@;iú;[ ;"navFlyoutBaseWidth;
+[ o;
+;il;	@;;;
+[ ;["/* Top Bar Settings */o;;in;"!default;	@;o;	;in;{	;i';i';i;i';	@;0;"topBarBgColor;
+[ o;;io;"!default;	@;o;;io;["px;"	45px;	@;i2;[ ;"topBarHeight;
+[ o;;ip;"!default;	@;o;;ip;["px;"	45px;	@;i2;[ ;"topBarHeightMobile;
+[ o;;iq;"!default;	@;o;;iq;["px;"	30px;	@;i#;[ ;"topBarBtmMargin;
+[ o;;ir;"!default;	@;o;$	;ir;	@;;&;"	bold;"topBarTitleWeight;
+[ o;;is;"!default;	@;o;;is;["px;"	17px;	@;i;[ ;"topBarTitleSize;
+[ o;;it;"!default;	@;o;	;it;{	;iÿ;iÿ;i;iÿ;	@;0;"topBarLinkColor;
+[ o;;iu;"!default;	@;o;$	;iu;	@;;&;"	bold;"topBarLinkWeight;
+[ o;;iv;"!default;	@;o;;iv;["px;"	13px;	@;i;[ ;"topBarLinkSize;
+[ o;;iw;"!default;	@;o;	;iw;{	;i';i';i;i';	@;0;"topBarDropBgColor;
+[ o;;ix;"!default;	@;o;	;ix;{	;iÿ;iÿ;i;iÿ;	@;0;"topBarDropLinkColor;
+[ o;;iy;"!default;	@;o;;iy;["px;"5px;	@;i
+;[ ;"topBarDropToggleSize;
+[ o;;iz;"!default;	@;o;	;iz;{	;iÿ;iÿ;i;iÿ;	@;0;"topBarDropToggleColor;
+[ o;;i{;"!default;	@;o;;i{;[ ;"0.5;	@;f0.5;@(;"topBarDropToggleAlpha;
+[ o;;i|;"!default;	@;o;;i|;["px;"
+200px;	@;iÈ;[ ;"topBarSearchWidth;
+[ o;;i};"!default;	@;o;;i};["px;"
+940px;	@;i¬;[ ;"topBarBreakPoint;
+[ o;
+;i};	@;;;
+[ ;["4/* Change to 9999px for always mobile layout */o;;i~;"!default;	@;o;;i~;["px;"8px;	@;i;[ ;"topBarNavToggleSize;
+[ o;
+;i{;	@;;;
+[ ;["/* UI Settings */o;;i};"!default;	@;o;;i};["px;"3px;	@;i;[ ;"thumbRadius;
+[ o;;i~;"!default;	@;o;;i~;["px;"	25px;	@;i;[ ;"progBarHeight;
+[ o;;i;"!default;	@;o;;0;i;{ ; [o;	;i;{	;iÿ;iÿ;i;iÿ;	@;0o;;i;["%;"20%;	@;i;[ ;	@;"darken;"progBarBorderColor;
+[ o;;i€;"!default;	@;o;;i€;["px;"1px;	@;i;[ ;"progBarBorderSize;
+[ o;;i;"!default;	@;o;;i;["px;"2px;	@;i;[ ;"progBarPad;
+[ o;;i‚;"!default;	@;o;!	;i‚;	@;":
+space;[o;;i‚;["px;"	17px;	@;i;[ o;;i‚;["px;"
+-22px;	@;iå;[ ;"linkListBottomMargin;
+[ o;;iƒ;"!default;	@;o;;iƒ;["px;"3px;	@;i;[ ;"tableBorderRadius;
+[ o;
+;i…;	@;;;
+[ ;["/* Tooltip Settings */o;;i‡;"!default;	@;o;!	;i‡;	@;";0;[o;$	;i‡;	@;;&;"dottedo;;i‡;["px;"1px;	@;i;[ o;	;i‡;{	;iÌ;iÌ;i;iÌ;	@;0;"hasTipBorderBottom;
+[ o;;iˆ;"!default;	@;o;$	;iˆ;	@;;&;"	bold;"hasTipFontWeight;
+[ o;;i‰;"!default;	@;o;	;i‰;{	;i8;i8;i;i8;	@;0;"hasTipFontColor;
+[ o;;iŠ;"!default;	@;o;!	;iŠ;	@;";0;[o;$	;iŠ;	@;;&;"dottedo;;iŠ;["px;"1px;	@;i;[ o;;0;iŠ;{ ; [o;'	;iŠ;("mainColor;	@;"mainColoro;;iŠ;["%;"20%;	@;i;[ ;	@;"darken;"hasTipBorderBottomHover;
+[ o;;i‹;"!default;	@;o;'	;i‹;("mainColor;	@;"mainColor;"hasTipFontColorHover;
+[ o;;iŒ;"!default;	@;o;	;iŒ;{	;i ;i ;i;i ;	@;0;"tooltipBackgroundColor;
+[ o;;i;"!default;	@;o;;i;[ ;"	0.85;	@;f0.84999999999999998 33;@(;"tooltipBackgroundOpacity;
+[ o;;iŽ;"!default;	@;o;;iŽ;["px;"	12px;	@;i;[ ;"tooltipFontSize;
+[ o;;i;"!default;	@;o;$	;i;	@;;&;"	bold;"tooltipFontWeight;
+[ o;;i;"!default;	@;o;	;i;{	;iÿ;iÿ;i;iÿ;	@;0;"tooltipFontColor;
+[ o;;i‘;"!default;	@;o;;i‘;[ ;"10;	@;i;@(;"tapToCloseFontSize;
+[ o;;i’;"!default;	@;o;$	;i’;	@;;&;"normal;"tapToCloseFontWeight;
+[ o;;i“;"!default;	@;o;	;i“;{	;iˆ;iˆ;i;iˆ;	@;0;"tapToCloseFontColor;
+[ o;;i”;"!default;	@;o;;i”;[ ;"14;	@;i;@(;"tooltipFontSizeScreenSm;
+[ o;;i•;"!default;	@;o;;i•;[ ;"	0.85;	@;f0.84999999999999998 33;@(;"tooltipBgOpacityScreenSm;
+[ o;;i–;"!default;	@;o;;i–;["px;"4px;	@;i	;[ ;"tooltipBorderRadius;
+[ o;
+;i˜;	@;;;
+[ ;["!/* Pricing Table Settings */o;;iš;"!default;	@;o;!	;iš;	@;";0;[o;$	;iš;	@;;&;"
+solido;;iš;["px;"1px;	@;i;[ o;	;iš;{	;iÝ;iÝ;i;iÝ;	@;0;"priceTableBorder;
+[ o;;i›;"!default;	@;o;	;i›;{	;iÝ;iÝ;i;iÝ;	@;0;"priceTitleBgColor;
+[ o;;iœ;"!default;	@;o;!	;iœ;	@;";0;[o;;iœ;["px;"	15px;	@;i;[ o;;iœ;["px;"	20px;	@;i;[ ;"priceTitlePadding;
+[ o;;i;"!default;	@;o;$	;i;	@;;&;"center;"priceTitleAlign;
+[ o;;iž;"!default;	@;o;	;iž;{	;i8;i8;i;i8;	@;0;"priceTitleColor;
+[ o;;iŸ;"!default;	@;o;$	;iŸ;	@;;&;"	bold;"priceTitleWeight;
+[ o;;i ;"!default;	@;o;;i ;["px;"	16px;	@;i;[ ;"priceTitleSize;
+[ o;;i¢;"!default;	@;o;	;i¢;{	;iî;iî;i;iî;	@;0;"priceMoneyBgColor;
+[ o;;i£;"!default;	@;o;!	;i£;	@;";0;[o;;i£;["px;"	15px;	@;i;[ o;;i£;["px;"	20px;	@;i;[ ;"priceMoneyPadding;
+[ o;;i¤;"!default;	@;o;$	;i¤;	@;;&;"center;"priceMoneyAlign;
+[ o;;i¥;"!default;	@;o;	;i¥;{	;i8;i8;i;i8;	@;0;"priceMoneyColor;
+[ o;;i¦;"!default;	@;o;$	;i¦;	@;;&;"normal;"priceMoneyWeight;
+[ o;;i§;"!default;	@;o;;i§;["px;"	20px;	@;i;[ ;"priceMoneySize;
+[ o;;i©;"!default;	@;o;	;i©;{	;iÿ;iÿ;i;iÿ;	@;0;"priceBgColor;
+[ o;;iª;"!default;	@;o;	;iª;{	;i|;i|;i;i|;	@;0;"priceDescColor;
+[ o;;i«;"!default;	@;o;;i«;["px;"	15px;	@;i;[ ;"priceDescPadding;
+[ o;;i¬;"!default;	@;o;$	;i¬;	@;;&;"center;"priceDescAlign;
+[ o;;i­;"!default;	@;o;;i­;["px;"	12px;	@;i;[ ;"priceDescFontSize;
+[ o;;i®;"!default;	@;o;$	;i®;	@;;&;"normal;"priceDescWeight;
+[ o;;i¯;"!default;	@;o;;i¯;[ ;"1.4;	@;f1.3999999999999999 ff;@(;"priceDescLineHeight;
+[ o;;i°;"!default;	@;o;!	;i°;	@;";0;[o;$	;i°;	@;;&;"dottedo;;i°;["px;"1px;	@;i;[ o;	;i°;{	;iÝ;iÝ;i;iÝ;	@;0;"priceDescBtmBorder;
+[ o;;i²;"!default;	@;o;	;i²;{	;i8;i8;i;i8;	@;0;"priceItemColor;
+[ o;;i³;"!default;	@;o;;i³;["px;"	15px;	@;i;[ ;"priceItemPadding;
+[ o;;i´;"!default;	@;o;$	;i´;	@;;&;"center;"priceItemAlign;
+[ o;;iµ;"!default;	@;o;;iµ;["px;"	14px;	@;i;[ ;"priceItemFontSize;
+[ o;;i¶;"!default;	@;o;$	;i¶;	@;;&;"normal;"priceItemWeight;
+[ o;;i·;"!default;	@;o;!	;i·;	@;";0;[o;$	;i·;	@;;&;"dottedo;;i·;["px;"1px;	@;i;[ o;	;i·;{	;iÝ;iÝ;i;iÝ;	@;0;"priceItemBtmBorder;
+[ o;;i¹;"!default;	@;o;	;i¹;{	;iõ;iõ;i;iõ;	@;0;"priceCtaBgColor;
+[ o;;iº;"!default;	@;o;$	;iº;	@;;&;"center;"priceCtaAlign;
+[ o;;i»;"!default;	@;o;;i»;["px;"	20px;	@;i;[ ;"priceCtaPadding;
+[ o;
+;i½;	@;;;
+[ ;["/* Orbit Settings */o;;i¿;"!default;	@;o;	;i¿;{	;i ;i ;i;i ;	@;0;""orbitCaptionBgColorOldBrowser;
+[ o;;iÀ;"!default;	@;o;;0;iÀ;{ ; [	o;;iÀ;[ ;"0;	@;i ;@(o;;iÀ;[ ;"0;	@;i ;@(o;;iÀ;[ ;"0;	@;i ;@(o;;iÀ;[ ;"0.6;	@;f0.59999999999999998 33;@(;	@;"	rgba;"orbitCaptionBgColor;
+[ o;;iÁ;"!default;	@;o;	;iÁ;{	;iÿ;iÿ;i;iÿ;	@;0;"orbitCaptionFontColor;
+[ o;;iÂ;"!default;	@;o;	;iÂ;{	;i™;i™;i;i™;	@;0;"orbitBulletNavColor;
+[ o;;iÃ;"!default;	@;o;	;iÃ;{	;i';i';i;i';	@;0;"orbitBulletNavColorActive;
+[ o;;iÄ;"!default;	@;o;	;iÄ;{	;i ;i ;i;i ;	@;0;"orbitHasThumbBorderColor;
+[ o;;iÅ;"!default;	@;o;;iÅ;["px;"2px;	@;i;[ ;"orbitHasThumbBorderWidth;
+[ o;;iÆ;"!default;	@;o;$	;iÆ;	@;;&;"
+solid;"orbitHasThumbBorderStyle;
+[ o;;iÇ;"!default;	@;o;;0;iÇ;{ ; [	o;;iÇ;[ ;"0;	@;i ;@(o;;iÇ;[ ;"0;	@;i ;@(o;;iÇ;[ ;"0;	@;i ;@(o;;iÇ;[ ;"0.7;	@;f0.69999999999999996 ff;@(;	@;"	rgba;"orbitSlideNumBgColor;
+[ o;;iÈ;"!default;	@;o;	;iÈ;{	;iÿ;iÿ;i;iÿ;	@;0;"orbitSlideNumFontColor;
+[ o;;iÉ;"!default;	@;o;;iÉ;["px;"5px;	@;i
+;[ ;"orbitSlideNumPadding;
+[ o;
+;iË;	@;;;
+[ ;["/* Clearing Settings */o;;iÍ;"!default;	@;o;;0;iÍ;{ ; [	o;;iÍ;[ ;"0;	@;i ;@(o;;iÍ;[ ;"0;	@;i ;@(o;;iÍ;[ ;"0;	@;i ;@(o;;iÍ;[ ;"0.8;	@;f0.80000000000000004 ™š;@(;	@;"	rgba;"clearingBg;
+[ o;;iÎ;"!default;	@;o;;0;iÎ;{ ; [o;;iÎ;[ ;"0;	@;i ;@(o;;iÎ;[ ;"0;	@;i ;@(o;;iÎ;[ ;"0;	@;i ;@(;	@;"rgb;"clearingOldBrowserBg;
+[ o;;iÏ;"!default;	@;o;;0;iÏ;{ ; [	o;;iÏ;[ ;"0;	@;i ;@(o;;iÏ;[ ;"0;	@;i ;@(o;;iÏ;[ ;"0;	@;i ;@(o;;iÏ;[ ;"0.7;	@;f0.69999999999999996 ff;@(;	@;"	rgba;"clearingCaptionBg;
+[ o;;iÐ;"!default;	@;o;;0;iÐ;{ ; [o;;iÐ;[ ;"0;	@;i ;@(o;;iÐ;[ ;"0;	@;i ;@(o;;iÐ;[ ;"0;	@;i ;@(;	@;"rgb;" clearingCaptionOldBrowserBg;
+[ o;;iÑ;"!default;	@;o;	;iÑ;{	;iÿ;iÿ;i;iÿ;	@;0;"clearingCaptionFontColor;
+[ o;;iÒ;"!default;	@;o;	;iÒ;{	;iÿ;iÿ;i;iÿ;	@;0;"clearingCloseColor;
+[ o;;iÓ;"!default;	@;o;	;iÓ;{	;iÿ;iÿ;i;iÿ;	@;0;"clearingArrowColor;
+[ o;;iÔ;"!default;	@;o;;iÔ;["px;"	16px;	@;i;[ ;"clearingArrowSize;
+[ o;;iÕ;"!default;	@;o;;0;iÕ;{ ; [	o;;iÕ;[ ;"0;	@;i ;@(o;;iÕ;[ ;"0;	@;i ;@(o;;iÕ;[ ;"0;	@;i ;@(o;;iÕ;[ ;"	0.75;	@;f	0.75;@(;	@;"	rgba;"clearingCarouselBg;
+[ o;;iÖ;"!default;	@;o;;0;iÖ;{ ; [o;;iÖ;[ ;"0;	@;i ;@(o;;iÖ;[ ;"0;	@;i ;@(o;;iÖ;[ ;"0;	@;i ;@(;	@;"rgb;"!clearingCarouselOldBrowserBg;
+[ o;;i×;"!default;	@;o;;i×;["px;"
+150px;	@;i–;[ ;"clearingCarouselHeight;
+[ o;;iØ;"!default;	@;o;;iØ;["%;"75%;	@;iP;[ ;"clearingActiveImgHeight;
+[ o;;iÙ;0;	@;o;;iÙ;["px;"
+175px;	@;i¯;[ ;"clearingCarouselThumbWidth;
+[ o;;iÚ;"!default;	@;o;!	;iÚ;	@;";0;[o;;iÚ;["px;"4px;	@;i	;[ o;$	;iÚ;	@;;&;"
+solido;;0;iÚ;{ ; [o;;iÚ;[ ;"255;	@;iÿ;@(o;;iÚ;[ ;"255;	@;iÿ;@(o;;iÚ;[ ;"255;	@;iÿ;@(;	@;"rgb;"&clearingCarouselThumbActiveBorder;
+[ o;;iÛ;"!default;	@;o;;0;iÛ;{ ; [	o;;iÛ;[ ;"0;	@;i ;@(o;;iÛ;[ ;"0;	@;i ;@(o;;iÛ;[ ;"0;	@;i ;@(o;;iÛ;[ ;"	0.75;	@;f	0.75;@(;	@;"	rgba;"clearingImgBg;
+[ o;;iÜ;"!default;	@;o;;0;iÜ;{ ; [o;;iÜ;[ ;"0;	@;i ;@(o;;iÜ;[ ;"0;	@;i ;@(o;;iÜ;[ ;"0;	@;i ;@(;	@;"rgb;"clearingImgOldBrowserBg;
+[ o;
+;iÞ;	@;;;
+[ ;["/* Joyride Settings */o;;ià;"!default;	@;o;;0;ià;{ ; [	o;;ià;[ ;"0;	@;i ;@(o;;ià;[ ;"0;	@;i ;@(o;;ià;[ ;"0;	@;i ;@(o;;ià;[ ;"0.8;	@;f0.80000000000000004 ™š;@(;	@;"	rgba;"
+tipBg;
+[ o;;iá;"!default;	@;o;	;iá;{	;i ;i ;i;i ;	@;0;"tipBgIE8;
+[ o;;iâ;"!default;	@;o;	;iâ;{	;iÿ;iÿ;i;iÿ;	@;0;"tipFontColor;
+[ o;;iã;"!default;	@;o;$	;iã;	@;;&;"	bold;"tipHeaderWeight;
+[ o;;iä;"!default;	@;o;;iä;["px;"
+300px;	@;i,;[ ;"tipDefaultWidth;
+[ o;;iå;"!default;	@;o;;iå;["px;"4px;	@;i	;[ ;"tipBorderRadius;
+[ o;;iæ;"!default;	@;o;!	;iæ;	@;";0;[o;;iæ;["px;"	18px;	@;i;[ o;;iæ;["px;"	20px;	@;i;[ o;;iæ;["px;"	24px;	@;i;[ ;"tipPadding;
+[ o;;iç;"!default;	@;o;;iç;["px;"	14px;	@;i;[ ;"tipNubSize;
+[ o;;iè;"!default;	@;o;;iè;["px;"	14px;	@;i;[ ;"tipFontSize;
+[ o;;ié;"!default;	@;o;;ié;["px;"	50px;	@;i7;[ ;"tipTimerWidth;
+[ o;;iê;"!default;	@;o;;iê;["px;"3px;	@;i;[ ;"tipTimerHeight;
+[ o;;ië;"!default;	@;o;!	;ië;	@;";0;[o;$	;ië;	@;;&;"
+solido;;ië;["px;"1px;	@;i;[ o;	;ië;{	;iZ;iZ;i;iZ;	@;0;"tipTimerBorder;
+[ o;;iì;"!default;	@;o;	;iì;{	;ik;ik;i;ik;	@;0;"tipTimerColor;
+[ o;;ií;"!default;	@;o;	;ií;{	;i|;i|;i;i|;	@;0;"tipCloseColor;
+[ o;;iî;"!default;	@;o;;iî;["px;"	20px;	@;i;[ ;"tipCloseSize;
+[ o;;iï;"!default;	@;o;$	;iï;	@;;&;"normal;"tipCloseWeight;
+[ o;;ið;"!default;	@;o;;0;ið;{ ; [	o;;ið;[ ;"0;	@;i ;@(o;;ið;[ ;"0;	@;i ;@(o;;ið;[ ;"0;	@;i ;@(o;;ið;[ ;"0.5;	@;f0.5;@(;	@;"	rgba;"tipScreenFill;
+[ o;
+;iò;	@;;;
+[ ;["$/* Off Canvas Width Settings */o;;iô;"!default;	@;o;;iô;["%;"80%;	@;iU;[ ;"mainWidth;
+[ o;;iõ;"!default;	@;o;;iõ;["%;"20%;	@;i;[ ;"complementaryWidth;
+[ o;
+;i÷;	@;;;
+[ ;["!/* Modular Scale Settings */o;
+;iù;	@;;;
+[ ;["?/* $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE */o;;iú;"!default;	@;o;;iú;["px;"	14px;	@;i;[ ;"baseFontSize;
+[ o;;iû;"!default;	@;o;;iû;["px;"	44px;	@;i1;[ ;"importantModNum;
+[ o;;iü;0;	@;o;!	;iü;	@;";0;[o;'	;iü;("baseFontSize;	@;"baseFontSizeo;'	;iü;("importantModNum;	@;"importantModNum;"base-size;
+[ o;
+;iý;	@;;;
+[ ;["À/* Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
+ * http://www.modularscale.com by Tim Brown
+ * https://github.com/scottkellum/modular-scale by scottkellum */o;
+;i;	@;;;
+[ ;["/* Media Queries */o;;i;"!default;	@;o;;i;["px;"
+768px;	@;i ;[ ;"screenSmall;
+[ o;;i;"!default;	@;o;;i;["px;"1279px;	@;iÿ;[ ;"screenMedium;
+[ o;;i;"!default;	@;o;;i;["px;"1441px;	@;i¡;[ ;"screenXlarge;
+[ o;
+;i;	@;;;
+[ ;["‹/* Saving for better em-based testing
+ * $screenSmall: 44em !default;
+ * $screenMedium: 77em !default;
+ * $screenXlarge: 104em !default; */o;
+;i;	@;;;
+[ ;["–/* Saving for Sass 3.2 stable release
+ * $mediaSmall: "only screen and (max-width: 767px)" !default;
+ * $mediaMedium: "only screen and (max-width: 1279px) and (min-width: 768px)" !default;
+ * $mediaXlarge: "only screen and (min-width: 1441px)" !default;
+ * $mediaLandscape: "screen and (orientation: landscape)" !default;
+ * $mediaPortrait: "screen and (orientation: portrait)" !default;
+ * $mediaAll: "only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)" !default; */
