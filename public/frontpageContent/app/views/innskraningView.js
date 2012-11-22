@@ -44,6 +44,8 @@ window.InnskraningView = window.SlideView.extend({
         var kennitala = ($(this.el).find(".kennitala").attr("value")).replace("-", "");
         var lykilord = $(this.el).find(".lykilord").attr("value");
 		var signOnType = "normal";
+        var whiteSpace = /(\s)/;
+        var nonAscii = /[^\u0000-\u0080]+/;
         this.disableLoginButton();
 
         if (!isValidKennitala(kennitala)) {
@@ -57,6 +59,12 @@ window.InnskraningView = window.SlideView.extend({
             this.enableLoginButton();
             return false;
         }        
+
+        if(lykilord.match(whiteSpace) || (lykilord.match(nonAscii))) {
+            this.villaLykilord("Leyfilegir stafir eru: a-z, A-Z, 0-9, og algeng greinarmerki.")
+            this.enableLoginButton();
+            return false;
+        }
 
         var request = $.ajax({
             url: "/mappan/SignInMappan",
