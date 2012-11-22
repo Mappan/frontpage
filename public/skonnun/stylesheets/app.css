@@ -6498,3 +6498,8 @@ footer h1 {
     margin-top: 170px;
   }
 }
+
+
+a img{border: 0px}
+footer a{text-decoration: underline}
+
