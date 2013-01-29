@@ -8,6 +8,11 @@ window.SkilmalarView = window.SlideView.extend({
         'click #komidBtn':'komidClick'
     },
 
+    errors: {
+        1008 : 'Skráning tókst ekki. Vinsamlegast reynið síðar.',
+        1031 : 'Netfang er ekki rétt.'
+    },
+
     reset: function() {
         $(this.el).find(".step2").hide();
         $(this.el).find(".step1").show();
@@ -42,9 +47,9 @@ window.SkilmalarView = window.SlideView.extend({
             if (num == 1000)
      			this.signOnRegistration();
             else if ((num > 1030) && (num < 1040))
-            	this.villaEmail(desc);
+            	this.villaEmail(this.errors[num]);
             else
-                this.villaService(desc);
+                this.villaService(this.errors[num]);
         });
 
         request.fail(function(jqXHR, textStatus) {

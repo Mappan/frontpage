@@ -9,6 +9,16 @@ window.InnskraningView = window.SlideView.extend({
         'keypress input': 'updateOnEnter',
         'click #innskraningSkilrikiBtn' : 'skilrikiClick'
     },
+
+    errors: {
+        1001 : 'Of margar rangar tilraunir. Notandaaðgangur lokaður.<br/>Reynið aftur síðar.',
+        1009 : 'Innskráning gekk ekki. Vinsamlegast reynið síðar.',
+        1011 : 'Óþekktur notandi. Vinsamlegast veldu <a href="#stofna">Stofna aðgang.</a>',
+        1013 : 'Ógild kennitala',
+        1021 : 'Engu lykilorði hefur verið úthlutað. Vinsamlegast veldu <a href="#stofna">Stofna aðgang.</a>',
+        1022 : 'Rangt lykilorð.',
+        1023 : 'Rangt lykilorð. Notaðu það sem sent var í banka'
+    },
     
     skilrikiClick: function() {
     	
@@ -76,18 +86,22 @@ window.InnskraningView = window.SlideView.extend({
 
         request.done(function(msg) {
         	var num = msg.returnCode;
-        	var desc = msg.description;
-			
+            var desc = msg.description;
+            
             if (num == 1000) // successful login
                 window.location.href = msg.redirectUrl;
             else if (num == 1100)
                 window.location.hash = "skilmalar";
             else if ((num > 1010) && (num < 1020))
-                this.villaKennitala(desc);
-            else if ((num > 1020) && (num < 1030))
-                this.villaLykilord(desc);
+                this.villaKennitala(this.errors[num]);
+            else if ((num > 1020) && (num < 1030)) {
+                if (num == 1023)
+                    this.villaLykilord(this.errors[num] + " " + desc);
+                else
+                    this.villaLykilord(this.errors[num]);
+            }
             else
-                this.villaService(desc);
+                this.villaService(this.errors[num]);
             
             this.enableLoginButton();
         });

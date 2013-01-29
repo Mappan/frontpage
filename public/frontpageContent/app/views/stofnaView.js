@@ -9,6 +9,13 @@ window.StofnaView = window.SlideView.extend({
         'keypress input': 'updateOnEnter',
         'click #stofnaSkilrikiBtn' : 'skilrikiClick'
     },
+
+    errors: {
+        3009 : 'Ekki tókst að búa til notandaaðgang. Vinsamlegast reynið síðar.',
+        3013 : 'Ógild kennitala.',
+        3014 : 'Notandaaðgangur þegar til. Vinsamlegast veldu <a href="#innskraning">innskráning.</a>',
+        3015 : 'Í vinnslu. Vinsamlegast bíðið.'
+    },
     
     skilrikiClick: function() {
     	
@@ -71,9 +78,9 @@ window.StofnaView = window.SlideView.extend({
                 $(this.el).find(".step2").show();
             }
             else if ((num > 3010) && (num < 3020))
-                this.villaKennitala(desc);
+                this.villaKennitala(this.errors[num]);
             else
-                this.villaService(desc);
+                this.villaService(this.errors[num]);
         	
         	this.enableCreateButton();
         });

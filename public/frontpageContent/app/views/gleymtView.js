@@ -8,6 +8,12 @@ window.GleymtView = window.SlideView.extend({
         'keypress input': 'updateOnEnter'
     },
 
+    errors: {
+        5009 : 'Ekki tókst að endurstilla lykilorði. Vinsamlegast reynið síðar.',
+        5011 : 'Notandi ekki til. Vinsamlegast veldu <a href="#stofna">Stofna aðgang.</a>',
+        3013 : 'Ógild kennitala.'
+    },
+
     reset: function() {
         $(this.el).find(".step2").hide();
         $(this.el).find(".step1").show();
@@ -43,9 +49,9 @@ window.GleymtView = window.SlideView.extend({
                 $(this.el).find(".step2").show();
             }
             else if ((num > 5010) && (num < 5020))
-                this.villaKennitala(desc);
+                this.villaKennitala(this.errors[num]);
             else
-                this.villaService(desc);
+                this.villaService(this.errors[num]);
             
             this.enableForgotButton();
         });
